@@ -121,6 +121,8 @@ class Game:
                     if event.key == pygame.K_d:
                         self.movement[1] = True
                     if event.key == pygame.K_w or event.key == pygame.K_SPACE:
+                        self.player.jump()
+                    if event.key == pygame.K_x:
                         self.player.velocity[1] = -3
                     if event.key == pygame.K_LSHIFT:
                         self.player.velocity[0] = 5
