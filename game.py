@@ -125,7 +125,7 @@ class Game:
                     if event.key == pygame.K_x:
                         self.player.velocity[1] = -3
                     if event.key == pygame.K_LSHIFT:
-                        self.player.velocity[0] = 5
+                        self.player.dash()
                     if event.key == pygame.K_s:
                         self.player.velocity[0] = 0
                 if event.type == pygame.KEYUP:
