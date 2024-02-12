@@ -38,6 +38,9 @@ class Game:
             "particle/leaf": Animation(
                 load_images("particles/leaf"), img_dur=20, loop=False
             ),
+            "particle/particle": Animation(
+                load_images("particles/particle"), img_dur=6, loop=False
+            ),
         }
 
         self.clouds = Clouds(self.assets["clouds"], count=16)
@@ -128,6 +131,8 @@ class Game:
                         self.player.dash()
                     if event.key == pygame.K_s:
                         self.player.velocity[0] = 0
+                    if event.key == pygame.K_l:
+                        self.player.pdash()
                 if event.type == pygame.KEYUP:
                     if event.key == pygame.K_a:
                         self.movement[0] = False
